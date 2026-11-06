@@ -1,0 +1,210 @@
+/* Wan hu 67 — identidad visual
+   Paleta tomada de la guía: azul profundo, rojo dragón, crema lunar y gris lunar. */
+:root {
+  --blue: #0B0F1A;
+  --red: #C8102E;
+  --cream: #F5F1E6;
+  --gray: #9CA3AF;
+  --white: #fffdf8;
+  --line: rgba(245, 241, 230, .18);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--blue);
+  color: var(--cream);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+a { color: inherit; }
+.site-header {
+  min-height: 88px;
+  padding: 18px clamp(22px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 15, 26, .96);
+}
+.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+.brand img { width: 48px; height: 48px; object-fit: contain; }
+.brand-copy { display: grid; gap: 3px; }
+.brand-copy strong { font-size: 18px; letter-spacing: .09em; }
+.brand-copy small { color: var(--gray); font-size: 9px; letter-spacing: .24em; }
+.header-note {
+  color: var(--gray);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+.header-note i { display: inline-block; width: 24px; height: 2px; margin: 0 10px 3px; background: var(--red); }
+.hero {
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 30px;
+  padding: 74px clamp(22px, 8vw, 124px) 88px;
+  background:
+    radial-gradient(ellipse at 78% 48%, rgba(200,16,46,.12), transparent 34%),
+    linear-gradient(135deg, #0B0F1A 0%, #101827 60%, #0B0F1A 100%);
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  background: var(--red);
+  transform: skewX(-35deg);
+  opacity: .95;
+}
+.hero::before { width: 5px; height: 210px; right: 8%; top: -75px; }
+.hero::after { width: 2px; height: 130px; right: 10%; top: -50px; background: var(--cream); }
+.hero-copy { position: relative; z-index: 2; max-width: 650px; }
+.eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 0 25px;
+  color: var(--gray);
+  font-size: 10px; font-weight: 700; letter-spacing: .24em;
+}
+.eyebrow span { width: 28px; height: 2px; background: var(--red); }
+h1 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(46px, 6.2vw, 82px);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+h1 em, h2 em { color: var(--red); font-style: normal; }
+.intro {
+  max-width: 510px;
+  margin: 28px 0 30px;
+  color: #c3c7ce;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.primary-link {
+  display: inline-flex; align-items: center; gap: 32px;
+  padding: 16px 19px;
+  background: var(--red);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 10px; font-weight: 800; letter-spacing: .16em;
+  border: 1px solid var(--red);
+}
+.primary-link span { font-size: 17px; line-height: 10px; }
+.primary-link:hover { background: transparent; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 54px; }
+.hero-meta span { color: var(--gray); font-size: 9px; letter-spacing: .14em; }
+.hero-meta b { color: var(--red); margin-right: 7px; }
+.hero-art {
+  min-height: 440px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+.main-logo {
+  position: relative; z-index: 2;
+  width: min(100%, 440px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 42px rgba(0,0,0,.5));
+}
+.art-glow {
+  position: absolute; z-index: -1;
+  width: 75%; aspect-ratio: 1; border-radius: 50%;
+  background: rgba(200,16,46,.13); filter: blur(60px);
+}
+.orbit {
+  position: absolute; z-index: 0;
+  border: 1px solid rgba(245,241,230,.16);
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+.orbit-one { width: 105%; height: 54%; }
+.orbit-two { width: 120%; height: 72%; transform: rotate(35deg); border-color: rgba(200,16,46,.22); }
+.art-caption {
+  position: absolute; z-index: 3; bottom: 0; right: 2%;
+  color: var(--gray); font-size: 9px; letter-spacing: .2em;
+}
+.art-caption b { color: var(--red); padding: 0 7px; }
+.hero-index {
+  position: absolute; right: 4%; bottom: 20px;
+  color: rgba(245,241,230,.07);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(70px, 13vw, 180px); line-height: 1;
+  pointer-events: none;
+}
+.hero-index span { font-family: "Montserrat", sans-serif; font-size: 13px; letter-spacing: .2em; }
+.fundamentals {
+  padding: 78px clamp(22px, 8vw, 124px) 86px;
+  background: var(--cream); color: var(--blue);
+}
+.section-heading { margin-bottom: 38px; }
+.section-heading .eyebrow { color: #69717e; }
+h2 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(11,15,26,.2); }
+.concept { position: relative; padding: 28px 28px 0 0; }
+.concept + .concept { padding-left: 28px; border-left: 1px solid rgba(11,15,26,.2); }
+.concept-number { color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+.concept-icon {
+  display: grid; place-items: center;
+  width: 42px; height: 42px; margin: 22px 0 16px;
+  border: 1px solid rgba(200,16,46,.35); border-radius: 50%;
+  color: var(--red); font-size: 24px;
+}
+.concept h3 { margin: 0 0 10px; font-family: "Cinzel", Georgia, serif; font-size: 21px; }
+.concept p { max-width: 330px; margin: 0; color: #59616d; font-size: 13px; line-height: 1.8; }
+.site-footer {
+  min-height: 82px; padding: 22px clamp(22px, 5vw, 76px);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--gray); font-size: 9px; letter-spacing: .16em;
+}
+.footer-brand { color: var(--cream); font-weight: 800; text-decoration: none; letter-spacing: .12em; }
+.site-footer p { margin: 0; }
+.site-footer span { text-align: right; }
+
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; padding-top: 65px; }
+  .hero-copy { max-width: 720px; }
+  .hero-art { min-height: 390px; margin-top: 5px; }
+  .main-logo { width: min(78%, 370px); }
+  .art-caption { right: 10%; }
+}
+@media (max-width: 600px) {
+  .site-header { min-height: 72px; padding: 13px 20px; }
+  .brand img { width: 40px; height: 40px; }
+  .brand-copy strong { font-size: 15px; }
+  .header-note { max-width: 120px; text-align: right; font-size: 8px; line-height: 1.6; }
+  .header-note i { display: none; }
+  .hero { min-height: auto; padding: 62px 22px 70px; gap: 5px; }
+  h1 { font-size: clamp(43px, 12vw, 62px); }
+  .intro { font-size: 14px; }
+  .hero-meta { gap: 14px; margin-top: 38px; }
+  .hero-meta span { font-size: 8px; }
+  .hero-art { min-height: 315px; }
+  .main-logo { width: min(82%, 310px); }
+  .orbit-one { width: 100%; }
+  .orbit-two { width: 112%; }
+  .fundamentals { padding: 58px 22px 64px; }
+  .concept-grid { grid-template-columns: 1fr; }
+  .concept, .concept + .concept { padding: 23px 0; border-left: 0; }
+  .concept + .concept { border-top: 1px solid rgba(11,15,26,.2); }
+  .concept-icon { margin: 14px 0 12px; }
+  .site-footer { flex-wrap: wrap; padding: 22px; }
+  .site-footer p { order: 3; flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
